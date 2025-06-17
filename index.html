@@ -2,37 +2,16 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>油飯DD省錢攻略_蝦皮折扣碼</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
     body {
-      font-family: "Arial", sans-serif;
+      font-family: Arial, sans-serif;
       color: #333;
       background-color: #f8f8f8;
-    }
-    .background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('https://ppt.cc/fWENsx@.jpg');
-      background-size: cover;
-      background-position: center;
-      filter: blur(10px);
-      z-index: -2;
-    }
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(255, 255, 255, 0.7);
-      z-index: -1;
-    }
-    .content {
       padding: 20px 15px;
       text-align: center;
     }
@@ -64,9 +43,10 @@
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      margin-bottom: 10px;
+      flex: 1 1 140px; /* 寬度彈性，最小140px */
+      max-width: 200px;
       min-width: 140px;
-      max-width: 220px;
+      transition: background-color 0.3s;
     }
     button:hover {
       background-color: #ff7755;
@@ -84,8 +64,7 @@
     a:hover {
       text-decoration: underline;
     }
-
-    /* 複製成功提示樣式 */
+    /* 複製成功提示 */
     .toast {
       position: fixed;
       bottom: 30px;
@@ -108,68 +87,62 @@
     @media (max-width: 600px) {
       .button-group {
         flex-direction: column;
-        gap: 8px;
-        align-items: center;
+        gap: 12px;
       }
       button {
-        width: auto;
-        min-width: 140px;
-        max-width: 220px;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
+        width: 100%;
+        max-width: 320px;
+        min-width: unset;
+        flex: none;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="background"></div>
-  <div class="overlay"></div>
+  <h1>🦐6.18蝦皮折扣碼</h1>
+  <p class="subtitle">點擊按鈕自動複製折扣碼，貼上即可領券</p>
 
-  <div class="content">
-    <h1>🦐6.18蝦皮折扣碼</h1>
-    <p class="subtitle">點擊按鈕自動複製折扣碼，貼上即可領券</p>
-
-    <section class="code-section">
-      <p><strong style="color:red">全站299-30券</strong></p>
-      <button onclick="copyCode('QMV6RHVHK')">複製折扣碼</button>
-    </section>
-
+  <section class="code-section">
+    <p><strong style="color:red">全站299-30券</strong></p>
     <div class="button-group">
+      <button onclick="copyCode('QMV6RHVHK')">複製折扣碼</button>
       <button onclick="copyCode('SPSV6')">7-11取貨</button>
       <button onclick="copyCode('FMSP6')">全家取貨</button>
     </div>
+  </section>
 
-    <section class="code-section">
-      <p><strong style="color:red">全站499-50券</strong></p>
+  <section class="code-section">
+    <p><strong style="color:red">全站499-50券</strong></p>
+    <div class="button-group">
       <button onclick="copyCode('618ATC')">複製折扣碼</button>
-    </section>
+    </div>
+  </section>
 
-    <section class="code-section">
-      <p><strong style="color:red">全站999-60券</strong></p>
+  <section class="code-section">
+    <p><strong style="color:red">全站999-60券</strong></p>
+    <div class="button-group">
       <button onclick="copyCode('SHOPEE618')">複製折扣碼</button>
-    </section>
+    </div>
+  </section>
 
-    <section class="code-section">
-      <p><strong style="color:red">商城299-30券</strong></p>
-      <div class="button-group">
-        <button onclick="copyCode('APSEVEN6')">7-11取貨</button>
-        <button onclick="copyCode('APP618FM')">全家取貨</button>
-        <button onclick="copyCode('HLAPP6')">萊爾富取貨</button>
-        <button onclick="copyCode('OK6APP')">OK取貨</button>
-      </div>
-    </section>
+  <section class="code-section">
+    <p><strong style="color:red">商城299-30券</strong></p>
+    <div class="button-group">
+      <button onclick="copyCode('APSEVEN6')">7-11取貨</button>
+      <button onclick="copyCode('APP618FM')">全家取貨</button>
+      <button onclick="copyCode('HLAPP6')">萊爾富取貨</button>
+      <button onclick="copyCode('OK6APP')">OK取貨</button>
+    </div>
+  </section>
 
-    <p class="section-title">歡迎加入我的省錢社群：</p>
-    <p>
-      <a href="https://line.me/ti/g2/ARxvlA8qbIgJf6ut4bngnwDGnLWy3x62pbqiMw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default">🔗 LINE社群</a> |
-      <a href="https://www.dcard.tw/@t5976">🔗 Dcard帳號</a> |
-      <a href="https://www.instagram.com/dd_shopping_go/">🔗 Instagram</a>
-    </p>
-  </div>
+  <p class="section-title">歡迎加入我的省錢社群：</p>
+  <p>
+    <a href="https://line.me/ti/g2/ARxvlA8qbIgJf6ut4bngnwDGnLWy3x62pbqiMw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" rel="noopener noreferrer">🔗 LINE社群</a> |
+    <a href="https://www.dcard.tw/@t5976" target="_blank" rel="noopener noreferrer">🔗 Dcard帳號</a> |
+    <a href="https://www.instagram.com/dd_shopping_go/" target="_blank" rel="noopener noreferrer">🔗 Instagram</a>
+  </p>
 
-  <!-- 成功提示 -->
   <div class="toast" id="toast">折扣碼已複製！</div>
 
   <script>
@@ -181,7 +154,6 @@
         }, 400);
       });
     }
-
     function showToast() {
       const toast = document.getElementById('toast');
       toast.classList.add('show');
@@ -190,5 +162,6 @@
       }, 1200);
     }
   </script>
+
 </body>
 </html>
