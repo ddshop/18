@@ -5,11 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>油飯DD省錢攻略_蝦皮折扣碼</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: "Arial", sans-serif;
       color: #333;
@@ -17,8 +13,10 @@
     }
     .background {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background-image: url('https://ppt.cc/fWENsx@.jpg');
       background-size: cover;
       background-position: center;
@@ -27,8 +25,10 @@
     }
     .overlay {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background-color: rgba(255, 255, 255, 0.7);
       z-index: -1;
     }
@@ -65,10 +65,8 @@
       border-radius: 8px;
       cursor: pointer;
       margin-bottom: 10px;
-      min-width: 120px;
-      max-width: 160px;
-      width: auto;
-      transition: background-color 0.3s ease;
+      min-width: 140px;
+      max-width: 220px;
     }
     button:hover {
       background-color: #ff7755;
@@ -109,17 +107,17 @@
     /* 手機優化 */
     @media (max-width: 600px) {
       .button-group {
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        gap: 10px;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
       }
       button {
-        min-width: 100px;
-        max-width: 100%;
         width: auto;
-        padding: 12px 16px;
-        font-size: 1em;
+        min-width: 140px;
+        max-width: 220px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
       }
     }
   </style>
@@ -165,9 +163,9 @@
 
     <p class="section-title">歡迎加入我的省錢社群：</p>
     <p>
-      <a href="https://line.me/ti/g2/ARxvlA8qbIgJf6ut4bngnwDGnLWy3x62pbqiMw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" rel="noopener">🔗 LINE社群</a> |
-      <a href="https://www.dcard.tw/@t5976" target="_blank" rel="noopener">🔗 Dcard帳號</a> |
-      <a href="https://www.instagram.com/dd_shopping_go/" target="_blank" rel="noopener">🔗 Instagram</a>
+      <a href="https://line.me/ti/g2/ARxvlA8qbIgJf6ut4bngnwDGnLWy3x62pbqiMw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default">🔗 LINE社群</a> |
+      <a href="https://www.dcard.tw/@t5976">🔗 Dcard帳號</a> |
+      <a href="https://www.instagram.com/dd_shopping_go/">🔗 Instagram</a>
     </p>
   </div>
 
@@ -180,9 +178,7 @@
         showToast();
         setTimeout(() => {
           window.location.href = 'https://s.shopee.tw/9UoF7x28IG';
-        }, 400); // 複製成功後 0.4 秒跳轉
-      }).catch(() => {
-        alert('複製失敗，請手動複製折扣碼：' + code);
+        }, 400);
       });
     }
 
@@ -194,6 +190,5 @@
       }, 1200);
     }
   </script>
-
 </body>
 </html>
