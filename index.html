@@ -61,7 +61,6 @@
       margin-bottom: 10px;
       font-size: 1.1em;
     }
-    /* 同組按鈕容器 */
     .button-group {
       display: flex;
       flex-wrap: wrap;
@@ -98,7 +97,6 @@
     a:hover {
       text-decoration: underline;
     }
-    /* 複製成功提示 */
     .toast {
       position: fixed;
       bottom: 30px;
@@ -117,12 +115,10 @@
       opacity: 1;
       pointer-events: auto;
     }
-
-    /* 手機優化 */
     @media (max-width: 600px) {
       .button-group {
         flex-direction: column;
-        align-items: center; /* 置中 */
+        align-items: center;
         gap: 10px;
       }
       button {
@@ -147,13 +143,12 @@
     <h1>🦐 6.18蝦皮折扣碼</h1>
     <p class="subtitle">點擊按鈕自動複製折扣碼，貼上即可領券</p>
 
-     <section class="code-section">
+    <section class="code-section">
       <p>全站100-20券</p>
       <div class="button-group">
         <button onclick="copyCode('618SPSHAF')">複製折扣碼</button>
       </div>
     </section>
-
 
     <section class="code-section">
       <p>全站299-40券(分眾)</p>
@@ -164,12 +159,13 @@
 
     <section class="code-section">
       <p>全站299-30券</p>
-       <button onclick="copyCode('93ST45J2W')">複製折扣碼</button>
-       <button onclick="copyCode('CBUXYMEGV')">複製折扣碼</button>
+      <div class="button-group">
+        <button onclick="copyCode('93ST45J2W')">複製折扣碼</button>
+        <button onclick="copyCode('CBUXYMEGV')">複製折扣碼</button>
       </div>
     </section>
 
-     <section class="code-section">
+    <section class="code-section">
       <p>全站499-60券(蝦幣)</p>
       <div class="button-group">
         <button onclick="copyCode('A618CART')">複製折扣碼</button>
