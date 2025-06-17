@@ -33,26 +33,26 @@
       z-index: -1;
     }
     .content {
-      padding: 40px 20px;
+      padding: 20px 15px; /* 由40px降為20px，上下縮小一半 */
       text-align: center;
     }
     h1 {
       color: #ee4d2d;
-      font-size: 2.5em;
-      margin-bottom: 10px;
+      font-size: 2em; /* 字體略微縮小 */
+      margin-bottom: 8px; /* 間距縮小 */
       text-shadow: 2px 2px #fff;
     }
     .subtitle {
-      font-size: 1.1em;
-      margin-bottom: 30px;
+      font-size: 1em;
+      margin-bottom: 20px; /* 間距縮小 */
     }
     .code-section {
-      margin-bottom: 30px;
+      margin-bottom: 20px; /* 間距縮小 */
     }
     button {
-      font-size: 1em;
-      padding: 10px 20px;
-      margin: 4px;
+      font-size: 0.9em; /* 字體略微縮小 */
+      padding: 8px 16px; /* 按鈕內距稍微減少 */
+      margin: 3px; /* 按鈕間距稍微減少 */
       background-color: #ee4d2d;
       color: white;
       border: none;
@@ -63,10 +63,10 @@
       background-color: #ff7755;
     }
     .section-title {
-      margin-top: 30px;
+      margin-top: 20px; /* 間距縮小 */
       font-weight: bold;
       color: #ee4d2d;
-      font-size: 1.2em;
+      font-size: 1.1em;
     }
     a {
       color: #ee4d2d;
@@ -94,32 +94,6 @@
     .toast.show {
       opacity: 1;
     }
-
-    /* 吉祥物動畫樣式 */
-    @keyframes slideInMascot {
-      0% {
-        transform: translateX(-150%) scale(0.8);
-        opacity: 0;
-      }
-      60% {
-        opacity: 1;
-        transform: translateX(10px) scale(1.05);
-      }
-      100% {
-        transform: translateX(0) scale(1);
-      }
-    }
-
-    .mascot {
-      position: fixed;
-      bottom: 0;
-      left: 20px;
-      width: 100px;
-      height: auto;
-      animation: slideInMascot 1.2s ease-out;
-      z-index: 10;
-      pointer-events: none;
-    }
   </style>
 </head>
 <body>
@@ -128,7 +102,7 @@
   <div class="overlay"></div>
 
   <div class="content">
-    <h1>🦐6.18蝦皮折扣碼</h1>
+    <h1>🦐 6.18蝦皮折扣碼</h1>
     <p class="subtitle">點擊按鈕自動複製折扣碼，貼上即可領券</p>
 
     <section class="code-section">
@@ -164,9 +138,6 @@
     </p>
   </div>
 
-  <!-- 吉祥物圖片 -->
-  <img src="https://ibb.co/zVctw5GT.png"class="mascot" alt="吉祥物" />
-  
   <!-- 成功提示 -->
   <div class="toast" id="toast">折扣碼已複製！</div>
 
