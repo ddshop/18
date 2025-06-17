@@ -2,10 +2,14 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>油飯DD省錢攻略_蝦皮折扣碼</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       font-family: "Arial", sans-serif;
       color: #333;
@@ -35,6 +39,8 @@
     .content {
       padding: 20px 15px;
       text-align: center;
+      max-width: 480px;
+      margin: 0 auto;
     }
     h1 {
       color: #ee4d2d;
@@ -47,32 +53,40 @@
       margin-bottom: 20px;
     }
     .code-section {
-      margin-bottom: 24px;
+      margin-bottom: 28px;
     }
+    .code-section p {
+      color: red;
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+    /* 同組按鈕容器 */
     .button-group {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
-      margin-top: 10px;
+      gap: 12px;
+      margin-top: 8px;
     }
     button {
       font-size: 1em;
-      padding: 10px 16px;
+      padding: 10px 18px;
       background-color: #ee4d2d;
       color: white;
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      min-width: 120px;
-      max-width: 200px;
-      flex: 1 1 auto;
+      min-width: 140px;
+      max-width: 180px;
+      flex: 1 1 140px;
+      transition: background-color 0.3s;
     }
     button:hover {
       background-color: #ff7755;
     }
     .section-title {
-      margin-top: 24px;
+      margin-top: 28px;
       font-weight: bold;
       color: #ee4d2d;
       font-size: 1.1em;
@@ -84,8 +98,7 @@
     a:hover {
       text-decoration: underline;
     }
-
-    /* 複製成功提示樣式 */
+    /* 複製成功提示 */
     .toast {
       position: fixed;
       bottom: 30px;
@@ -102,19 +115,25 @@
     }
     .toast.show {
       opacity: 1;
+      pointer-events: auto;
     }
 
     /* 手機優化 */
     @media (max-width: 600px) {
       .button-group {
         flex-direction: column;
-        gap: 12px;
+        align-items: center; /* 置中 */
+        gap: 10px;
       }
       button {
-        width: 100%;
+        width: 90%;
         max-width: 320px;
         min-width: auto;
         flex: none;
+      }
+      .content {
+        padding: 15px 12px;
+        max-width: 100%;
       }
     }
   </style>
@@ -129,7 +148,7 @@
     <p class="subtitle">點擊按鈕自動複製折扣碼，貼上即可領券</p>
 
     <section class="code-section">
-      <p><strong style="color:red">全站299-30券</strong></p>
+      <p>全站299-30券</p>
       <div class="button-group">
         <button onclick="copyCode('QMV6RHVHK')">複製折扣碼</button>
         <button onclick="copyCode('SPSV6')">7-11取貨</button>
@@ -138,21 +157,21 @@
     </section>
 
     <section class="code-section">
-      <p><strong style="color:red">全站499-50券</strong></p>
+      <p>全站499-50券</p>
       <div class="button-group">
         <button onclick="copyCode('618ATC')">複製折扣碼</button>
       </div>
     </section>
 
     <section class="code-section">
-      <p><strong style="color:red">全站999-60券</strong></p>
+      <p>全站999-60券</p>
       <div class="button-group">
         <button onclick="copyCode('SHOPEE618')">複製折扣碼</button>
       </div>
     </section>
 
     <section class="code-section">
-      <p><strong style="color:red">商城299-30券</strong></p>
+      <p>商城299-30券</p>
       <div class="button-group">
         <button onclick="copyCode('APSEVEN6')">7-11取貨</button>
         <button onclick="copyCode('APP618FM')">全家取貨</button>
@@ -163,13 +182,12 @@
 
     <p class="section-title">歡迎加入我的省錢社群：</p>
     <p>
-      <a href="https://line.me/ti/g2/ARxvlA8qbIgJf6ut4bngnwDGnLWy3x62pbqiMw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default">🔗 LINE社群</a> |
-      <a href="https://www.dcard.tw/@t5976">🔗 Dcard帳號</a> |
-      <a href="https://www.instagram.com/dd_shopping_go/">🔗 Instagram</a>
+      <a href="https://line.me/ti/g2/ARxvlA8qbIgJf6ut4bngnwDGnLWy3x62pbqiMw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" rel="noopener noreferrer">🔗 LINE社群</a> |
+      <a href="https://www.dcard.tw/@t5976" target="_blank" rel="noopener noreferrer">🔗 Dcard帳號</a> |
+      <a href="https://www.instagram.com/dd_shopping_go/" target="_blank" rel="noopener noreferrer">🔗 Instagram</a>
     </p>
   </div>
 
-  <!-- 成功提示 -->
   <div class="toast" id="toast">折扣碼已複製！</div>
 
   <script>
