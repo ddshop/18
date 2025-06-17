@@ -46,13 +46,13 @@
       font-size: 1.1em;
       margin-bottom: 30px;
     }
-    .code-section {
-      margin-bottom: 30px;
+    .code-group {
+      margin-bottom: 25px;
     }
     button {
       font-size: 1em;
       padding: 10px 20px;
-      margin: 4px; /* 行距縮小 */
+      margin: 6px 4px;
       background-color: #ee4d2d;
       color: white;
       border: none;
@@ -63,7 +63,7 @@
       background-color: #ff7755;
     }
     .section-title {
-      margin-top: 30px;
+      margin-top: 40px;
       font-weight: bold;
       color: #ee4d2d;
       font-size: 1.2em;
@@ -75,8 +75,6 @@
     a:hover {
       text-decoration: underline;
     }
-
-    /* 複製成功提示樣式 */
     .toast {
       position: fixed;
       bottom: 30px;
@@ -105,25 +103,34 @@
     <h1>🦐6.18蝦皮折扣碼</h1>
     <p class="subtitle">點擊按鈕自動複製折扣碼，貼上即可領券</p>
 
-    <section class="code-section">
+    <div class="code-group">
       <p><strong style="color:red">全站299-30券</strong></p>
       <button onclick="copyCode('QMV6RHVHK')">複製折扣碼</button>
-    </section>
-    <button onclick="copyCode('SPSV6')">7-11取貨</button>
-    </section>
-     <button onclick="copyCode('FMSP6')">全家取貨</button>
-    </section>
+    </div>
 
-    <p><strong style="color:red">全站499-50券</strong></p>
+    <div class="code-group">
+      <p><strong style="color:red">取貨優惠</strong></p>
+      <button onclick="copyCode('SPSV6')">7-11取貨</button>
+      <button onclick="copyCode('FMSP6')">全家取貨</button>
+    </div>
+
+    <div class="code-group">
+      <p><strong style="color:red">全站499-50券</strong></p>
       <button onclick="copyCode('618ATC')">複製折扣碼</button>
-    </section>
+    </div>
 
-     <p><strong style="color:red">全站999-60券</strong></p>
+    <div class="code-group">
+      <p><strong style="color:red">全站999-60券</strong></p>
       <button onclick="copyCode('SHOPEE618')">複製折扣碼</button>
-    </section>
+    </div>
 
-   
-   
+    <div class="code-group">
+      <p><strong style="color:red">商城299-30券</strong></p>
+      <button onclick="copyCode('APSEVEN6')">7-11取貨</button>
+      <button onclick="copyCode('APP618FM')">全家取貨</button>
+      <button onclick="copyCode('HLAPP6')">萊爾富取貨</button>
+      <button onclick="copyCode('OK6APP')">OK取貨</button>
+    </div>
 
     <p class="section-title">歡迎加入我的省錢社群：</p>
     <p>
@@ -133,7 +140,6 @@
     </p>
   </div>
 
-  <!-- 成功提示 -->
   <div class="toast" id="toast">折扣碼已複製！</div>
 
   <script>
@@ -142,7 +148,7 @@
         showToast();
         setTimeout(() => {
           window.location.href = 'https://s.shopee.tw/9UoF7x28IG';
-        }, 400); // 跳轉延遲 0.4 秒
+        }, 400);
       });
     }
 
@@ -151,8 +157,9 @@
       toast.classList.add('show');
       setTimeout(() => {
         toast.classList.remove('show');
-      }, 1200); // 顯示時間 1.2 秒
+      }, 1200);
     }
   </script>
 </body>
 </html>
+
